@@ -60,21 +60,25 @@ save_button = driver.find_element(By.XPATH, "//button[@class='function-button si
 time.sleep(3)
 save_button.click()
 
+#find element to select more options
 more_options = driver.find_element(By.XPATH, "//button[@class='toggle function-button single']")
 more_options.click()
 
+#find element to delete the space
 delete_button = driver.find_element(By.XPATH, "//button[@class='modal-trigger button with-border compact']")
 time.sleep(3)
 delete_button.click()
 
+#find element to enter the space name which is to be deleted
 delete_space_name = driver.find_element(By.XPATH, "//input[@placeholder='space name']")
 time.sleep(3)
 delete_space_name.send_keys("New space")
 
+#find element to click on delete button
 delete_space_btn = driver.find_element(By.XPATH, "//button[@class='button primary fullWidth']")
 time.sleep(3)
 delete_space_btn.click()
-
 time.sleep(3)
+
 #Close the webdriver instance
 driver.close()
